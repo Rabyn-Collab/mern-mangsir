@@ -6,7 +6,8 @@ const Header = () => {
     <div className='flex bg-black text-white px-5 py-2 items-end justify-between'>
 
       <h1 className='text-2xl'>Next App</h1>
-      <nav>
+      <nav className='space-x-5'>
+        <Link href={'/products'}>Products</Link>
         <Link href={'/about'}>About</Link>
       </nav>
 
