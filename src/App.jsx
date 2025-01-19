@@ -3,8 +3,7 @@ import { createBrowserRouter } from 'react-router'
 import Home from './pages/Home';
 import About from './pages/About';
 import { RouterProvider } from 'react-router-dom';
-import Page1 from './pages/home_compo/Page1';
-import Page2 from './pages/home_compo/Page2';
+import RootLayout from './components/RootLayout';
 
 const App = () => {
 
@@ -12,24 +11,21 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Home />,
+      element: <RootLayout />,
       children: [
         {
-          path: 'page1',
-          element: <Page1 />
+          path: 'home',
+          element: <Home />
         },
         {
-          path: 'page2',
-          element: <Page2 />
+          path: 'about',
+          element: <About />
         }
 
       ]
     },
 
-    {
-      path: 'about',
-      element: <About />
-    }
+
 
   ]);
 
