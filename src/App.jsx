@@ -14,8 +14,9 @@ const App = () => {
       element: <RootLayout />,
       children: [
         {
-          path: 'home',
-          element: <Home />
+          index: true,
+          element: <Home />,
+
         },
         {
           path: 'about',
