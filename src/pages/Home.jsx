@@ -1,19 +1,11 @@
 import React from 'react'
+import DisplaySection from '../components/DisplaySection'
 
 const Home = () => {
   return (
-    <div>
+    <div className='px-10'>
 
-
-
-
-
-      <h1 className='text-2xl font-bold'>This is Home Page</h1>
-
-
-
-
-
+      <DisplaySection />
 
 
     </div>
