@@ -2,7 +2,7 @@ import React from 'react'
 
 const DisplaySection = () => {
   return (
-    <div className='grid grid-cols-grid-3 items-center '>
+    <div className='grid grid-cols-grid-3 md:grid-cols-1 md:mb-4 items-center '>
       <div className='h-[400px]'>
         <dotlottie-player
           src="https://lottie.host/ad074b92-eb74-44a8-a48f-4b335850f88c/OTTisY2eAN.lottie"
