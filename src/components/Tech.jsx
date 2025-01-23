@@ -8,8 +8,8 @@ const Tech = () => {
 
       <div className='grid grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center'>
 
-        <DiJavascript size={170} />
-        <DiPython size={170} />
+        <DiJavascript size={170} className='hover:scale-150 duration-500 ease-in   ' />
+        <DiPython size={170} className='animate-cl bg-bgs' />
         <DiCss3 size={170} />
         <DiJava size={170} />
         <DiNodejs size={170} />
