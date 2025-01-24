@@ -6,18 +6,15 @@ import { useState } from 'react';
 
 const Home = () => {
 
-  const some = useState();
+  const [count, setCount] = useState(10);
 
-  const persons = ['ram', 'shyam', 'hari'];
-
-  console.log(some);
-
-  let count = 0;
 
   const increment = () => {
-    count++;
+    setCount((prev) => prev + 1);
     console.log(count);
   }
+
+
 
   return (
     <div className='p-5'>
