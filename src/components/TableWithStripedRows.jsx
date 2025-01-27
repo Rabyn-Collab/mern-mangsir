@@ -1,4 +1,5 @@
 import { Avatar, Card, IconButton, Typography } from "@material-tailwind/react";
+import { DialogDefault } from "./DialogDefault";
 
 const TABLE_HEAD = ["Username", "Email", "Avatar", 'Remove'];
 
@@ -43,9 +44,8 @@ export function TableWithStripedRows({ users }) {
 
               </td>
               <td className="p-4">
-                <IconButton size="sm" color="pink">
-                  <i className="fas fa-trash" />
-                </IconButton>
+                <DialogDefault />
+
               </td>
             </tr>
           ))}
