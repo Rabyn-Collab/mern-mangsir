@@ -16,12 +16,22 @@ const Home = () => {
   const addUser = () => {
 
     const newUser = {
+      userId: faker.string.uuid(),
       username: faker.internet.username(),
       email: faker.internet.email(),
       avatar: faker.image.avatar(),
     }
     setUsers((prev) => [...prev, newUser]);
   }
+
+
+  // const numbers = [
+  //   { id: 1, name: 'one' },
+  //   { id: 2, name: 'two' },
+  // ];
+
+  // const g = numbers.filter((num) => num.id !== 1);
+  // console.log(g);
 
 
 
@@ -39,7 +49,7 @@ const Home = () => {
 
 
 
-      <TableWithStripedRows users={users} />
+      <TableWithStripedRows users={users} setUsers={setUsers} />
 
 
 

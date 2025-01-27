@@ -1,11 +1,12 @@
-import { Avatar, Card, IconButton, Typography } from "@material-tailwind/react";
+import { Avatar, Card, Typography } from "@material-tailwind/react";
 import { DialogDefault } from "./DialogDefault";
 
 const TABLE_HEAD = ["Username", "Email", "Avatar", 'Remove'];
 
 
 
-export function TableWithStripedRows({ users }) {
+export function TableWithStripedRows({ users, setUsers }) {
+
   return (
     <Card className="h-full w-full overflow-scroll">
       <table className="w-full min-w-max table-auto text-left">
@@ -44,8 +45,7 @@ export function TableWithStripedRows({ users }) {
 
               </td>
               <td className="p-4">
-                <DialogDefault />
-
+                <DialogDefault setUsers={setUsers} userId={userId} />
               </td>
             </tr>
           ))}

@@ -8,10 +8,14 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 
-export function DialogDefault() {
+export function DialogDefault({ setUsers, userId }) {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen((prev) => !prev);
+
+  const removeUser = () => {
+    setUsers((prev) => prev.filter((user) => user.userId !== userId));
+  }
 
   return (
     <>
@@ -36,7 +40,10 @@ export function DialogDefault() {
           >
             <span>Cancel</span>
           </Button>
-          <Button variant="gradient" color="green" onClick={handleOpen}>
+          <Button variant="gradient" color="green" onClick={() => {
+            removeUser();
+            handleOpen();
+          }}>
             <span>Confirm</span>
           </Button>
         </DialogFooter>
