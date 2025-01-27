@@ -1,6 +1,6 @@
-import { Avatar, Card, Typography } from "@material-tailwind/react";
+import { Avatar, Card, IconButton, Typography } from "@material-tailwind/react";
 
-const TABLE_HEAD = ["UserId", "Username", "Email", "Avatar"];
+const TABLE_HEAD = ["Username", "Email", "Avatar", 'Remove'];
 
 
 
@@ -28,11 +28,6 @@ export function TableWithStripedRows({ users }) {
             <tr key={userId} className="even:bg-blue-gray-50/50">
               <td className="p-4">
                 <Typography variant="small" color="blue-gray" className="font-normal">
-                  {userId}
-                </Typography>
-              </td>
-              <td className="p-4">
-                <Typography variant="small" color="blue-gray" className="font-normal">
                   {username}
                 </Typography>
               </td>
@@ -41,10 +36,16 @@ export function TableWithStripedRows({ users }) {
                   {email}
                 </Typography>
               </td>
+
               <td className="p-4">
 
                 <Avatar src={avatar} alt="avatar" />
 
+              </td>
+              <td className="p-4">
+                <IconButton size="sm" color="pink">
+                  <i className="fas fa-trash" />
+                </IconButton>
               </td>
             </tr>
           ))}

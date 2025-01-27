@@ -16,7 +16,6 @@ const Home = () => {
   const addUser = () => {
 
     const newUser = {
-      userId: faker.string.uuid(),
       username: faker.internet.username(),
       email: faker.internet.email(),
       avatar: faker.image.avatar(),
