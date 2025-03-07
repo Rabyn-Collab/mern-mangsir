@@ -5,5 +5,6 @@ export default {
   // ...other config
   build: {
     outDir: 'build',
-  }
+  },
+  plugins: [react()],
 }
