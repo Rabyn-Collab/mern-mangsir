@@ -15,7 +15,6 @@ import OrderDetail from './features/order/OrderDetail';
 import AuthRoutes from './ui/AuthRoutes';
 import AdminRoutes from './ui/AdminRoutes';
 
-// import { useSelector } from 'react-redux';
 
 const App = () => {
 
