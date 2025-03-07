@@ -1,11 +1,8 @@
 {
-  "builds": [
+  "rewrites": [
     {
-      "src": "vite.config.js",
-      "use": "@vercel/node",
-      "config": {
-        "outputDirectory": "dist"
-      }
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
