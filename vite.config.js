@@ -6,6 +6,6 @@ export default defineConfig({
     chunkSizeWarningLimit: 1600,
     outDir: 'dist',
   },
-  base: '/', // Ensure this is correctly set
+  base: './', // Use `./` if you get path errors
   plugins: [react()],
-})
+});
