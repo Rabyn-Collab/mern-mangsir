@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URI).then((val) => {
 });
 
 app.use(cors({
-  origin: ['http://localhost:5173'],
+  origin: ['http://localhost:5173', 'https://mern-mangsir.vercel.app'],
 }));
 app.use(express.json());
 app.use(fileUpload({
