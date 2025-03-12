@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import PostList from '../_component/PostList'
 import PostLoading from './loading'
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Post Page',
@@ -14,7 +15,12 @@ export default async function Page() {
   return (
     <div className='p-5 space-y-5'>
 
-      <h1>Post Pages</h1>
+      <div className='flex justify-between'>
+        <h1>Post Pages</h1>
+        <Link href={"/post/add-post"}><button className='cursor-pointer bg-black text-white px-4 py-1 rounded-lg'>Add Post</button></Link>
+
+      </div>
+
 
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veniam laboriosam molestias recusandae illo consequuntur obcaecati excepturi odit fugiat ad quaerat libero, quasi fuga eos quae eius? Id, vel voluptatibus?</p>
 
