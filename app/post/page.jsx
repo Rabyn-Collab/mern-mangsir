@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 
-export const revalidate = 10;
+//export const revalidate = 10;
 export default async function Page() {
 
   return (
