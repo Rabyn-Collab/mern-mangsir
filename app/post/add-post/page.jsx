@@ -3,6 +3,7 @@
 import { Formik } from 'formik';
 import React, { useTransition } from 'react'
 import { postData } from '../../_lib/serverAction';
+import toast from 'react-hot-toast';
 
 export default function Page() {
 
@@ -22,7 +23,12 @@ export default function Page() {
         }}
         onSubmit={(val) => {
           setTransition(async () => {
-            await postData(val);
+            const { error } = await postData(val);
+            if (error) {
+              toast.error(error, { position: 'top-center' });
+            } else {
+              // toast.success('Post Added', { position: 'top-center',  });
+            }
           });
 
         }}
