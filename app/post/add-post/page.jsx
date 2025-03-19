@@ -4,10 +4,12 @@ import { Formik } from 'formik';
 import React, { useTransition } from 'react'
 import { postData } from '../../_lib/serverAction';
 import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 
 export default function Page() {
 
   const [isPending, setTransition] = useTransition();
+  const router = useRouter();
 
   return (
 
@@ -27,6 +29,8 @@ export default function Page() {
             if (error) {
               toast.error(error, { position: 'top-center' });
             } else {
+
+
               // toast.success('Post Added', { position: 'top-center',  });
             }
           });

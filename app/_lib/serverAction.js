@@ -5,6 +5,8 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 
+
+
 export async function postData(val) {
   try {
     await axios.post('https://67831c8c8b6c7a1316f382b3.mockapi.io/posts', val);
@@ -12,8 +14,8 @@ export async function postData(val) {
     return { error: 'something went wrong' };
   }
 
-  revalidatePath('/post');
-  redirect('/post');
+  //revalidatePath('/post');
+  // redirect('/post');
 
 
 }

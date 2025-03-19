@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react'
 
 
@@ -12,6 +13,7 @@ export const generateMetadata = async ({ params }) => {
 export default async function Page({ params }) {
 
   const { id } = await params;
+  const data = await axios.get(`https://67831c8c8b6c7a1316f382b3.mockapi.io/posts/${id}`);
 
   return (
     <div>
